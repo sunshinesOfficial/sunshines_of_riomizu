@@ -7,16 +7,16 @@
     <!-- Include Font Awesome for the heart icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Ensure the iframe fits the 9:16 aspect ratio and is centered */
+        /* Ensure the iframe fits the 9:16 aspect ratio and scales responsively */
         .reel-container {
             position: relative;
-            width: 100%;
-            max-width: 360px;
+            width: 100%; /* Take up the full width of the screen */
+            max-width: 360px; /* Limit the maximum width for larger screens */
             aspect-ratio: 9 / 16; /* Maintain a 9:16 aspect ratio */
             margin: auto;
             overflow: hidden;
             border: 2px solid #ddd; /* Optional: Add a border for style */
-            border-radius: 10px; /* Rounded corners for a polished look */
+            border-radius: 10px; /* Rounded corners for aesthetics */
         }
 
         .reel-container iframe {
@@ -26,11 +26,26 @@
             border: none;
         }
 
+        /* Add some padding to the footer */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Responsive text for smaller screens */
+        h1 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        /* Style the "View Full Reel" link */
         .view-full-reel {
             display: block;
             text-align: center;
             margin: 15px auto 0;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #007bff;
             text-decoration: none;
@@ -38,13 +53,6 @@
 
         .view-full-reel:hover {
             color: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 20px;
-            color: #333;
         }
     </style>
 </head>
