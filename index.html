@@ -33,8 +33,8 @@
         /* Flip effect for cards */
         .card {
             background-color: #fff;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             perspective: 1000px;
             border-radius: 10px;
             overflow: hidden;
@@ -68,27 +68,22 @@
         .card-front {
             background-color: #ffcc00;
             color: white;
-            font-size: 16px;
-        }
-
-        .card-back {
-            background-color: #4caf50;
-            color: white;
-            font-size: 14px;
-            padding: 10px;
-        }
-
-        .card a {
-            color: white;
-            text-decoration: none;
             font-size: 18px;
         }
 
-        .card a:hover {
-            color: #ffcc00;
+        .card-back {
+            background-color: #ffcc00; /* Set yellow color for the back side */
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            transform: rotateY(180deg); /* Rotate the back side */
         }
 
-        /* Social Media icons in a grid */
+        /* Two elements per row */
+        .cards-container .card:nth-child(even) {
+            margin-left: 30px;
+        }
+
         .social-media {
             display: flex;
             justify-content: center;
@@ -116,6 +111,18 @@
         footer span {
             color: red;
         }
+
+        .reel-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .reel-container iframe {
+            border: none;
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -127,98 +134,100 @@
         <!-- Age -->
         <div class="card">
             <div class="card-inner">
-                <div class="card-front">Age</div>
-                <div class="card-back">28</div>
+                <div class="card-front">
+                    Age
+                </div>
+                <div class="card-back">
+                    27
+                </div>
+            </div>
+        </div>
+
+        <!-- Real Name -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    Real Name
+                </div>
+                <div class="card-back">
+                    Rio Mizu
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthplace -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    Birthplace
+                </div>
+                <div class="card-back">
+                    Kawasaki, Japan
+                </div>
+            </div>
+        </div>
+
+        <!-- Nationality -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    Nationality
+                </div>
+                <div class="card-back">
+                    Japanese
+                </div>
             </div>
         </div>
 
         <!-- Profession -->
         <div class="card">
             <div class="card-inner">
-                <div class="card-front">Profession</div>
-                <div class="card-back">Model</div>
-            </div>
-        </div>
-
-        <!-- Birthdate -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Birthdate</div>
-                <div class="card-back">July 16, 1996</div>
-            </div>
-        </div>
-
-        <!-- Height -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Height</div>
-                <div class="card-back">6'1" (185 cm)</div>
-            </div>
-        </div>
-
-        <!-- Instagram Username -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Instagram</div>
+                <div class="card-front">
+                    Profession
+                </div>
                 <div class="card-back">
-                    <a href="https://www.instagram.com/rio.mizu716" target="_blank">rio.mizu716</a>
+                    Model & Content Creator
                 </div>
             </div>
         </div>
 
-        <!-- YouTube Username -->
+        <!-- Career Highlights -->
         <div class="card">
             <div class="card-inner">
-                <div class="card-front">YouTube</div>
+                <div class="card-front">
+                    Career Highlights
+                </div>
                 <div class="card-back">
-                    <a href="https://www.youtube.com/@rio.mizu716" target="_blank">rio.mizu716</a>
+                    Known for "Tadhana"
                 </div>
             </div>
         </div>
 
-        <!-- TikTok Username -->
+        <!-- Online Presence -->
         <div class="card">
             <div class="card-inner">
-                <div class="card-front">TikTok</div>
-                <div class="card-back">
-                    <a href="https://www.tiktok.com/@rio.mizu716" target="_blank">rio.mizu716</a>
+                <div class="card-front">
+                    Online Presence
                 </div>
-            </div>
-        </div>
-
-        <!-- Facebook Username -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Facebook</div>
                 <div class="card-back">
-                    <a href="https://www.facebook.com/rio.mizu716/" target="_blank">rio.mizu716</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Threads Username -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Threads</div>
-                <div class="card-back">
-                    <a href="https://tr.ee/6aT8fsxIzp" target="_blank">rio.mizu716</a>
+                    YouTube, Instagram, TikTok
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Instagram Reel -->
-    <div class="reel-container" style="text-align: center; margin-top: 30px;">
-        <iframe src="https://www.instagram.com/reel/C4H2pZ6Jcf4/embed" width="360" height="640" frameborder="0" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" style="border:none; overflow:hidden; max-width:100%; height:auto;"></iframe>
-    </div>
-
-    <!-- Social Media Icons -->
+    <!-- Social Media Links -->
     <div class="social-media">
         <a href="https://www.instagram.com/rio.mizu716" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/@rio.mizu716" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://www.tiktok.com/@rio.mizu716" target="_blank"><i class="fab fa-tiktok"></i></a>
         <a href="https://www.facebook.com/rio.mizu716/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://tr.ee/6aT8fsxIzp" target="_blank"><i class="fab fa-instagram"></i> Threads</a>
+        <a href="https://tr.ee/6aT8fsxIzp" target="_blank"><i class="fab fa-threads"></i></a>
+    </div>
+
+    <!-- Instagram Reel Embed -->
+    <div class="reel-container">
+        <iframe src="https://www.instagram.com/reel/C4H2pZ6Jcf4/embed" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
 
     <!-- Footer -->
