@@ -6,16 +6,43 @@
     <title>Rio Mizu's Fan Page</title>
     <!-- Include Font Awesome for the heart icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Ensure the iframe fits the 9:16 aspect ratio and is centered */
+        .reel-container {
+            position: relative;
+            width: 100%; /* Take up full width of the container */
+            max-width: 360px; /* Limit to a manageable size */
+            aspect-ratio: 9 / 16; /* Maintain a 9:16 aspect ratio */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .reel-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Rio Mizu's Fan Page</h1>
 
-    <!-- Instagram Embed (Reel video with correct aspect ratio) -->
-    <iframe src="https://www.instagram.com/reel/C4H2pZ6Jcf4/embed" width="1080" height="1920" frameborder="0" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" style="border:none; overflow:hidden; max-width:100%; height:auto;"></iframe>
+    <!-- Instagram Embed (Reel video with correct 9:16 aspect ratio) -->
+    <div class="reel-container">
+        <iframe src="https://www.instagram.com/reel/C4H2pZ6Jcf4/embed" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
 
     <!-- "Created with love for Rio Mizu" message -->
-    <footer style="text-align: center; margin-top: 20px; font-size: 20px; color: #333;">
+    <footer>
         Created with <span style="color: red;">❤️</span> for Rio Mizu
     </footer>
 
