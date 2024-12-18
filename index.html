@@ -21,6 +21,16 @@
             margin-top: 20px;
         }
 
+        /* Photo styling */
+        .profile-photo {
+            display: block;
+            width: 300px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         /* Card container for the About section */
         .cards-container {
             display: flex;
@@ -63,62 +73,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-        }
-
-        .card-front {
-            background-color: #4CAF50; /* Green for the front side */
+            font-size: 20px;
             color: white;
-            font-size: 18px;
         }
 
         .card-back {
-            background-color: #4CAF50; /* Green for the back side as well */
-            color: white;
-            font-size: 16px;
-            padding: 10px;
-            transform: rotateY(180deg); /* Rotate the back side */
+            background-color: yellow; /* Color on the back after flip */
+            color: black;
         }
 
-        /* Social media links */
-        .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .social-media a {
-            font-size: 30px;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .social-media a:hover {
-            color: #FFEB3B;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 16px;
-            color: #333;
-        }
-
-        footer span {
-            color: red;
-        }
-
-        /* Instagram Reel Embed Section */
+        /* Reel styling */
         .reel-container {
             position: relative;
             width: 100%; /* Full width for responsiveness */
             max-width: 360px; /* Limit max width for desktops */
-            margin: auto;
+            margin: 40px auto;
             overflow: hidden;
             border: 2px solid #ddd; /* Add border for aesthetics */
             border-radius: 10px; /* Rounded corners */
-            margin-top: 40px; /* Position it towards the bottom */
         }
 
         .reel-container iframe {
@@ -127,63 +99,43 @@
             border: none;
         }
 
-        /* Add a fallback image for the reel */
-        .fallback-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-            margin: auto;
+        /* Footer with social media icons */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
         }
 
-        /* Add style for the fallback link */
-        .fallback-link {
-            display: block;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: #007bff;
-            margin-top: 10px;
+        /* Social media icons container */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            font-size: 30px;
+            color: #333;
             text-decoration: none;
         }
 
-        .fallback-link:hover {
-            color: #0056b3;
+        .social-icons a:hover {
+            color: #007bff;
         }
 
-        /* Media Query for smaller screens (mobile devices) */
-        @media (max-width: 768px) {
-            .card {
-                width: 48%;  /* Ensure 2 cards per row on mobile */
-            }
-
-            .cards-container {
-                gap: 15px;  /* Reduce gap on mobile */
-            }
-
-            .reel-container {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .card {
-                width: 100%;  /* Stack cards on top of each other on very small screens */
-            }
-
-            .reel-container {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
 
     <h1>Rio Mizu's Fan Page</h1>
 
+    <!-- Add the profile photo at the beginning of the page -->
+    <img src="https://static.wixstatic.com/media/9a3bdb_ef1196b3ce8c432f91237039a8a46241~mv2.jpg/v1/fill/w_980,h_1268,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9a3bdb_ef1196b3ce8c432f91237039a8a46241~mv2.jpg" alt="Rio Mizu" class="profile-photo">
+
     <!-- About Section with Flipping Cards -->
     <div class="cards-container">
-        <!-- Age -->
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
@@ -195,31 +147,28 @@
             </div>
         </div>
 
-        <!-- Real Name -->
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    Real Name
+                    Born
                 </div>
                 <div class="card-back">
-                    Rio Mizu
+                    July 16, 1996
                 </div>
             </div>
         </div>
 
-        <!-- Birthplace -->
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    Birthplace
+                    Known For
                 </div>
                 <div class="card-back">
-                    Kawasaki, Japan
+                    "Tadhana" TV series
                 </div>
             </div>
         </div>
 
-        <!-- Nationality -->
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
@@ -231,71 +180,37 @@
             </div>
         </div>
 
-        <!-- Profession -->
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    Profession
+                    Occupation
                 </div>
                 <div class="card-back">
-                    Model & Content Creator
-                </div>
-            </div>
-        </div>
-
-        <!-- Career Highlights -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    Career Highlights
-                </div>
-                <div class="card-back">
-                    Known for "Tadhana"
-                </div>
-            </div>
-        </div>
-
-        <!-- Online Presence -->
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    Online Presence
-                </div>
-                <div class="card-back">
-                    YouTube, Instagram, TikTok
+                    Model, Content Creator
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Social Media Links -->
-    <div class="social-media">
-        <a href="https://www.instagram.com/rio.mizu716" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@rio.mizu716" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.tiktok.com/@rio.mizu716" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/rio.mizu716/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://tr.ee/6aT8fsxIzp" target="_blank"><i class="fab fa-threads"></i></a>
-    </div>
-
-    <!-- Instagram Embed for Reel -->
+    <!-- Instagram Embed (Reel video with fallback for mobile) -->
     <div class="reel-container">
         <iframe 
             src="https://www.instagram.com/reel/C4H2pZ6Jcf4/embed" 
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
         </iframe>
-        <noscript>
-            <img class="fallback-image" 
-                src="https://via.placeholder.com/360x640?text=View+Reel+on+Instagram" 
-                alt="Instagram Reel Fallback">
-            <a class="fallback-link" href="https://www.instagram.com/reel/C4H2pZ6Jcf4/" target="_blank">
-                View Full Reel on Instagram
-            </a>
-        </noscript>
     </div>
 
-    <!-- Footer Message -->
+    <!-- Social Media Icons Section -->
     <footer>
         Created with <span style="color: red;">❤️</span> for Rio Mizu
+        <div class="social-icons">
+            <a href="https://www.instagram.com/riomizu/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@riomizu" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
     </footer>
 
 </body>
