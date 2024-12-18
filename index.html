@@ -4,48 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rio Mizu's Fan Page</title>
-    <!-- Include Font Awesome for the heart icon -->
+    <!-- Include Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Global styles */
+        /* General Page Styling */
         body {
+            background-color: #fff;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Animation for fade-in */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
+            color: #333;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 36px;
+            color: #f0a500; /* Yellow for title */
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 16px;
             color: #333;
         }
 
-        /* Reel container styles */
+        footer span {
+            color: #f0a500; /* Yellow heart */
+        }
+
+        /* Color Scheme - Yellow and Green */
         .reel-container {
             position: relative;
-            width: 100%;
+            width: 100%; 
             max-width: 360px;
             margin: auto;
             overflow: hidden;
-            border: 2px solid #ddd;
+            border: 2px solid #28a745; /* Green border */
             border-radius: 10px;
-            margin-top: 20px;
+            background-color: #f8f9fa;
         }
 
         .reel-container iframe {
@@ -64,64 +57,110 @@
 
         .fallback-link {
             display: block;
-            text-align: center;
             font-size: 16px;
             font-weight: bold;
-            color: #007bff;
+            color: #28a745; /* Green link */
             margin-top: 10px;
             text-decoration: none;
         }
 
         .fallback-link:hover {
-            color: #0056b3;
+            color: #218838; /* Darker green */
         }
 
-        /* About Rio Mizu Section */
-        .about-section {
-            background-color: #fff;
-            padding: 30px;
-            margin: 40px 20px;
+        /* Flip Animation */
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: auto;
+            perspective: 1000px;
+            margin-bottom: 20px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #f0a500; /* Yellow front */
+            color: white;
+            padding: 20px;
             border-radius: 10px;
+        }
+
+        .flip-card-back {
+            background-color: #28a745; /* Green back */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            transform: rotateY(180deg);
+        }
+
+        /* Styling for About Section and individual cards */
+        .about-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #28a745; /* Green background */
+            color: white;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
-        .about-section h2 {
-            font-size: 28px;
-            text-align: center;
-            color: #333;
+        .about-container:hover {
+            background-color: #218838; /* Darker green when hovered */
         }
 
-        .about-text {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-            text-align: justify;
+        /* Social Media Section */
+        .social-media-icons {
+            margin-top: 30px;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 16px;
-            color: #333;
+        .social-media-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            margin: 0 15px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #28a745; /* Green background for icons */
+            transition: background-color 0.3s;
         }
 
-        .footer-heart {
-            color: red;
+        .social-media-icons a:hover {
+            background-color: #218838; /* Darker green on hover */
         }
     </style>
 </head>
 <body>
 
-    <h1 class="fade-in">Rio Mizu's Fan Page</h1>
+    <h1>Rio Mizu's Fan Page</h1>
 
-    <!-- Instagram Embed (Reel video with fallback for mobile) -->
-    <div class="reel-container fade-in">
+    <!-- Instagram Embed -->
+    <div class="reel-container">
         <iframe 
             src="https://www.instagram.com/reel/C4H2pZ6Jcf4/embed" 
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
         </iframe>
-
-        <!-- Fallback image and link -->
         <noscript>
             <img class="fallback-image" 
                 src="https://via.placeholder.com/360x640?text=View+Reel+on+Instagram" 
@@ -132,18 +171,101 @@
         </noscript>
     </div>
 
-    <!-- About Rio Mizu Section -->
-    <div class="about-section fade-in">
-        <h2>About Rio Mizu</h2>
-        <p class="about-text">
-            Rio Mizu is a prominent model known for his striking looks and captivating presence in the fashion world. With a significant following on social media, Rio has become a sensation in the industry. His influence continues to grow as he continues to inspire millions with his talent and charisma. 
-            Rio's journey in the world of modeling began with a passion for fashion and a love for expressing himself creatively. He is often seen in collaborations with top designers and has appeared in numerous fashion events. Rio's ability to engage with his audience has made him one of the most beloved figures in the industry today.
-        </p>
+    <!-- About Rio Mizu - Flipping Cards for each detail -->
+    <div class="about-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Age</h2>
+                    <p>Click to reveal his age!</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Age</h2>
+                    <p>Rio Mizu is 28 years old.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Career</h2>
+                    <p>Click to learn more about his career!</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Career</h2>
+                    <p>Rio Mizu is a well-known model and influencer with a growing fan base.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Influence</h2>
+                    <p>Click to discover his influence!</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Influence</h2>
+                    <p>He is recognized for his positive social media presence and incredible charisma.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Achievements</h2>
+                    <p>Click to see his accomplishments!</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Achievements</h2>
+                    <p>Rio Mizu has achieved significant recognition in fashion and online communities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Follow Rio Mizu</h2>
+                    <p>Click to follow him on Instagram!</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Follow Rio Mizu</h2>
+                    <a href="https://www.instagram.com/rio.mizu716/" target="_blank" style="color:white; font-weight:bold;">Follow him on Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Icons for Following -->
+    <div class="social-media-icons">
+        <a href="https://www.instagram.com/rio.mizu716/" target="_blank" title="Follow Rio on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/rio.mizu716" target="_blank" title="Follow Rio on Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/c/rio.mizu716" target="_blank" title="Follow Rio on YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.tiktok.com/@rio.mizu716" target="_blank" title="Follow Rio on TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
     </div>
 
     <!-- "Created with love for Rio Mizu" message -->
-    <footer class="fade-in">
-        Created with <span class="footer-heart">❤️</span> for Rio Mizu
+    <footer>
+        Created with <span>❤️</span> for Rio Mizu
     </footer>
 
 </body>
