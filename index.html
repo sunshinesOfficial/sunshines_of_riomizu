@@ -34,7 +34,7 @@
         /* Flip effect for cards */
         .card {
             background-color: #4CAF50; /* Initial green color */
-            width: 45%;  /* Take up 45% of the row width */
+            width: 48%;  /* Adjust width to ensure two cards per row */
             height: 200px;
             perspective: 1000px;
             border-radius: 10px;
@@ -73,7 +73,7 @@
         }
 
         .card-back {
-            background-color: #FFEB3B; /* Yellow for the back side */
+            background-color: #4CAF50; /* Green for the back side as well */
             color: white;
             font-size: 16px;
             padding: 10px;
@@ -111,9 +111,10 @@
 
         .reel-container {
             position: absolute;
-            top: 150px;
-            right: 20px;
-            width: 300px;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
             height: auto;
             z-index: 10;
         }
@@ -128,7 +129,25 @@
         /* Media Query for smaller screens (mobile devices) */
         @media (max-width: 768px) {
             .card {
-                width: 100%;  /* Take up the full width on smaller screens */
+                width: 48%;  /* Ensure 2 cards per row on mobile */
+            }
+
+            .cards-container {
+                gap: 15px;  /* Reduce gap on mobile */
+            }
+
+            .reel-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;  /* Stack cards on top of each other on very small screens */
+            }
+
+            .reel-container {
+                width: 100%;
             }
         }
     </style>
@@ -233,13 +252,13 @@
         <a href="https://tr.ee/6aT8fsxIzp" target="_blank"><i class="fab fa-threads"></i></a>
     </div>
 
-    <!-- Embed Rio Mizu's Reel -->
+    <!-- Embed Rio Mizu's Reel at the bottom -->
     <div class="reel-container">
         <iframe src="https://www.instagram.com/p/CsY3pW9p7P7/embed" frameborder="0" scrolling="no" allow="encrypted-media" allowfullscreen></iframe>
     </div>
 
     <footer>
-        <p>Created with ❤️ by a fan of <span>Rio Mizu</span></p>
+        <p>Created with ❤️ for <span>Rio Mizu</span></p>
     </footer>
 
 </body>
